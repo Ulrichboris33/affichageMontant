@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>DIC cafe</title>
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="header_nav">
+        <a href="index.html" class="logo"
+          ><img src="images/sample_logo_k.png"
+        /></a>
+        <ul class="global_nav">
+          <a href="index.html" class="global_nav_item">
+            <li>Home</li>
+          </a>
+          <a href="#menu" class="global_nav_item">
+            <li>Menu</li>
+          </a>
+          <a href="contact.html" class="global_nav_item">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <article class="section_inner">
+        <div class="section_title cafe">
+          <h1>Ventes de grains de café</h1>
+        </div>
+      </article>
+      <article class="section_inner menu">
+        <section>
+          <div class="center">
+            <h1 class="menu_title">Gamme</h1>
+          </div>
+          <ul id="menu">
+            <li>
+              <img src="images/sample_pancake1.jpg" />
+              <div>
+                <h2>Pancakes aux myrtilles</h2>
+                <p>Une crêpe garnie de myrtilles fraîches</p>
+                <p>¥1,200</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/sample_pancake2.jpg" />
+              <div>
+                <h2>Crêpe aux fraises</h2>
+                <p>Profitez de la collaboration entre les fraises et le miel</p>
+                <p>¥1,300</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <div class="center">
+            <h1 class="menu_title">Coffee menu</h1>
+          </div>
+          <ul>
+            <div>
+              <li>
+                <img src="images/sample_cafe1.jpg" class="caffee_menu_image" />
+                <div>
+                  <h2>Mélange original 200g</h2>
+                  <p>500 JPY</p>
+                </div>
+              </li>
+              <li>
+                <img src="images/sample_cafe2.jpg" class="caffee_menu_image" />
+                <div>
+                  <h2>Mélange original 500g</h2>
+                  <p>900 JPY</p>
+                </div>
+              </li>
+            </div>
+            <div>
+              <li>
+                <img src="images/sample_cafe3.jpg" class="caffee_menu_image" />
+                <div>
+                  <h2>Mélange spécial 200g</h2>
+                  <p>700 JPY</p>
+                </div>
+              </li>
+              <li>
+                <img src="images/sample_cafe4.jpg" class="caffee_menu_image" />
+                <div>
+                  <h2>Mélange spécial 500g</h2>
+                  <p>1200 yens</p>
+                </div>
+              </li>
+            </div>
+          </ul>
+        </section>
+        <article>
+          <h2>Information les frais d’expédition</h2>
+          <ul>
+            <li>
+              Le montant total est inférieur à 2000 yens et les frais
+              d’expédition sont de 500 yens
+            </li>
+            <li>250 yens pour 2000 yens ou plus</li>
+            <li>Gratuit pour les commandes supérieures à 3000 yens</li>
+          </ul>
+        </article>
+      </article>
+      <article class="section_inner">
+        <h2>Commande</h2>
+        <form>
+          <label for="product">S’il vous plaît sélectionner un produit</label>
+          <div>
+            <select id="product" required>
+              <option hidden value="0">S’il vous plaît sélectionner</option>
+              <option id="1">Mélange original 200g 500 yens</option>
+              <option id="2">Mélange original 500g 700 yens</option>
+              <option id="3">Mélange spécial 200g 900 yens</option>
+              <option id="4">Mélange spécial 500g 1200 yens</option>
+            </select>
+            <p>Choisissez votre quantité</p>
+            <input type="number" min="1" max="5" id="number" required />
+          </div>
+          <br />
+          <input type="button" class="btn" value="Ajouter" onclick="add()" />
+          <input
+            type="button"
+            class="btn"
+            value="Prix total"
+            onclick="calc()"
+          />
+        </form>
+      </article>
+    </section>
+    <footer>
+      <nav>
+        <ul>
+          <a href="index.html">
+            <li>Home</li>
+          </a>
+          <a href="#menu">
+            <li>Menu</li>
+          </a>
+          <a href="contact.html">
+            <li>Contact</li>
+          </a>
+          <a href="index.html">
+            <li>
+              <img src="images/sample_logo_w.png" />
+            </li>
+          </a>
+        </ul>
+      </nav>
+      <p>© DIVIC Corp. All RIGHTS RESERVED.</p>
+    </footer>
+    <script src="sale_advance.js"></script>
+  </body>
+</html>
